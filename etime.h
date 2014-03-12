@@ -75,11 +75,11 @@ void etime::start_clock (){
 	clock_ = clock();
 }
 /*		
-	register late CPU clock
+	register late CPU clock,
 	compute difference between previous
 	and set etime_ member as the elapsed
 	time in seconds between previous call
-	of stat() and current call of end();
+	of start() and forward call of end();
 */
 void etime::end_clock (){
 	clock_ = clock() - clock_;
